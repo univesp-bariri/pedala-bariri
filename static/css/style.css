@@ -250,7 +250,7 @@ a:focus {
     padding-top: 100px;
 }
 
-.login-section {
+.about-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -267,7 +267,7 @@ a:focus {
         padding-top: 250px;
     }
 
-    .login-section {
+    .about-section {
         padding: 100px 0;
     }
 
@@ -363,7 +363,6 @@ canvas{
   }
 
 .brand {
-    margin-top: 250px;
     display: grid;
     background-color: #fff;
     max-width: 100%;
@@ -378,7 +377,7 @@ canvas{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-#about {
+#route {
     padding-top: 100px;
 }
 
@@ -400,13 +399,98 @@ canvas{
     margin: 0;
 }
 
-#about {
+#route {
     width: 100%;
     margin-left: 0;
 }
 
-#about p {
+#route p {
     margin: 0 auto;
     width: 50%;
     padding-bottom: 40px;;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #ccad49;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #FFF; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:#ccad49;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:#7a6520; }
+
+[type="button"] {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 100%;
+    background:#ccad49;
+    border-radius:5px;
+    border:0;
+    cursor:pointer;
+    color:white;
+    font-size:24px;
+    padding-top:10px;
+    padding-bottom:10px;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+  }
+
+#btn-send-loader {
+    display: none;
+}
+
+#alert-msg {
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+}
+
+#contact {
+    padding: 100px;
+}
+
+.contact-box {
+    margin-top: 50px;
+}
+
+#route {
+    margin-bottom: 150px;
 }

@@ -14,3 +14,16 @@ $(function() {
         }, 1500, 'easeInOutExpo');
     });
 });
+
+const btnSend = document.querySelector('#btn-send')
+const btnSendLoader = document.querySelector('#btn-send-loader')
+
+btnSend.addEventListener("click", ()=> {
+    btnSendLoader.style.display = "block";
+    btnSend.style.display = "none"
+
+});
+
+setTimeout(() => {
+    document.querySelector('#alert-msg').style.display = 'none';
+}, 5000)
