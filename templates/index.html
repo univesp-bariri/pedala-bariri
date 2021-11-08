@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    
 
 </head>
 
@@ -38,10 +37,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#route">Rotas</a>
+                        <a href="#about">Sobre</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Sobre</a>
+                        <a href="#login">Login</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contato</a>
@@ -62,7 +61,7 @@
                         <h1><i class="fa fa-title fa-bicycle"></i> <br> <span class="light">Pedala</span> Bariri</h1>
                         <p class="intro-text">Nossos eventos ciclísticos, passeios sociais e programas de mudança de comportamento reúnem toda a comunidade. </p>
                         <div class="page-scroll">
-                            <a href="#route" class="btn btn-circle">
+                            <a href="#about" class="btn btn-circle">
                                 <i class="fa fa-angle-double-down animated"></i>
                             </a>
                         </div>
@@ -72,10 +71,10 @@
         </div>
     </section>
 
-    <section id="route" class="container content-section text-center">
+    <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Rotas Turísticas</h2>
+                <h2>Sobre</h2>
                 <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
                     reunior amigos que, assim como nós, eram apaixonados por ciclismo</p>
                 </p>
@@ -84,13 +83,13 @@
         </div>
     </section>
 
-    <section id="about" class="content-section text-center">
-        <div class="about-section">
+    <section id="login" class="content-section text-center">
+        <div class="login-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Sobre nós</h2>
-                    <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
-                        reunior amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                    <h2>Login</h2>
+                    <p>Junte-se a nós!</p>
+                    <a href="http://startbootstrap.com/grayscale" class="btn btn-default btn-lg">Login</a>
                 </div>
             </div>
         </div>
@@ -98,19 +97,16 @@
 
     <section id="contact" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 contact-box">
+            <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contato</h2>
                 <p>Para sugestões, dúvidas ou parceria, sinta-se livre para entrar em contato conosco</p>
+                <p>pedala.bariri@gmail.com</p>
 
-                <form action="/send" method="post">      
-                <input name="nome" type="text" class="feedback-input" placeholder="Nome" required>   
-                <input name="email" type="text" class="feedback-input" placeholder="E-mail" required>
-                <textarea name="mensagem" class="feedback-input" placeholder="Mensagem" required></textarea>
-                <button id="btn-send" type="submit">Enviar</button>
-                <button id="btn-send-loader" type="button" disabled>
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button>
+                <form>      
+                <input name="name" type="text" class="feedback-input" placeholder="Nome" />   
+                <input name="email" type="text" class="feedback-input" placeholder="E-mail" />
+                <textarea name="text" class="feedback-input" placeholder="Mensagem"></textarea>
+                <input type="submit" value="SUBMIT"/>
                 </form>
 
             </div>
@@ -128,8 +124,6 @@
     <script src="{{ url_for('static', filename='js/jquery.easing.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/canvas.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/style.js') }}" ></script>
-
-
 
 </body>
 
