@@ -4,14 +4,12 @@ from flask_mail import Mail, Message
 app = Flask('__name__')
 app.secret_key = "itsok"
 
-GMAIL_PASSWORD = MAIL_PASS
-
 email_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": 'pedala.bariri@gmail.com',
+    "MAIL_USERNAME": GMAIL_USER,
     "MAIL_PASSWORD": GMAIL_PASSWORD
 }
 
