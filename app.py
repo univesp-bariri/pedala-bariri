@@ -4,13 +4,15 @@ from flask_mail import Mail, Message
 app = Flask('__name__')
 app.secret_key = "itsok"
 
+
+
 email_settings = {
     "MAIL_SERVER": 'smtp.gmail.com',
     "MAIL_PORT": 465,
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
-    "MAIL_USERNAME": GMAIL_USER,
-    "MAIL_PASSWORD": GMAIL_PASSWORD
+    "MAIL_USERNAME": 'GMAIL_USER',
+    "MAIL_PASSWORD": 'GMAIL_PASSWORD'
 }
 
 app.config.update(email_settings)
