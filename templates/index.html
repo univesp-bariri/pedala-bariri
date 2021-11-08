@@ -102,7 +102,7 @@
                 <h2>Contato</h2>
                 <p>Para sugestões, dúvidas ou parceria, sinta-se livre para entrar em contato conosco</p>
 
-                <form action="{{ url_for('send') }}" method="post">      
+                <form action="/send" method="post">      
                 <input name="nome" type="text" class="feedback-input" placeholder="Nome" required>   
                 <input name="email" type="text" class="feedback-input" placeholder="E-mail" required>
                 <textarea name="mensagem" class="feedback-input" placeholder="Mensagem" required></textarea>
