@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    
 
 </head>
 
@@ -77,8 +76,15 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Rotas Turísticas</h2>
                 <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
-                    reunior amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                    reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
                 </p>
+
+                <div class="routes-images">
+                    <a href="{{ url_for('gastro') }}"><img class="zoom" src="{{ url_for('static', filename='img/gastro-index.jpg') }}" alt="Rota Gastronômica"></a>
+                    <a href="{{ url_for('cultural') }}"><img class="zoom" src="{{ url_for('static', filename='img/cultural-index.jpg') }}" alt="Rota Cultural"></a>
+                    <a href="{{ url_for('rural') }}"><img class="zoom" src="{{ url_for('static', filename='img/rural-index.jpg') }}" alt="Rota Rural"></a>
+                </div>
+
 
             </div>
         </div>
@@ -90,7 +96,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Sobre nós</h2>
                     <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
-                        reunior amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                        reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
                 </div>
             </div>
         </div>

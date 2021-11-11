@@ -144,6 +144,18 @@ a:focus {
 
 }
 
+.intro-gastro {
+    background: url(../img/intro-bg-gastro.jpg) no-repeat center scroll;
+}
+
+.intro-cultural {
+    background: url(../img/intro-bg-cultural.jpg) no-repeat center scroll;
+}
+
+.intro-rural {
+    background: url(../img/intro-bg-rural.jpg) no-repeat center scroll;
+}
+
 .intro-body {
     display: table-cell;
     vertical-align: middle;
@@ -262,6 +274,18 @@ a:focus {
     -o-background-size: cover;
 }
 
+.about-section-gastro {
+    background: url(../img/bg-gastro.jpg) no-repeat center center scroll;
+}
+
+.about-section-cultural {
+    background: url(../img/bg-cultural.jpg) no-repeat center center scroll;
+}
+
+.about-section-rural {
+    background: url(../img/bg-rural.jpg) no-repeat center center scroll;
+}
+
 @media(min-width:767px) {
     .content-section {
         padding-top: 250px;
@@ -271,6 +295,10 @@ a:focus {
         padding: 100px 0;
     }
 
+}
+
+#about {
+    padding-top: 150px;
 }
 
 .btn {
@@ -493,4 +521,210 @@ textarea {
 
 #route {
     margin-bottom: 150px;
+}
+
+.routes-images {
+    display: ruby;
+}
+
+.routes-images img {
+    width: 300px;
+    margin: 0 20px;
+    border: 2px solid #FFF;
+}
+
+.zoom {
+    transition: transform .2s; /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+.zoom:hover {
+transform: scale(1.1); 
+}
+
+.zoom-places {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+  }
+
+.zoom-places:hover {
+transform: scale(1.1); 
+}
+
+#comments {
+margin-bottom: 50px;
+padding: 0;
+margin-top: 30px;
+}
+
+#comment-box {
+    background-color: #FFF;
+    max-width: 60%;
+    padding: 10px 20px;
+    margin: 0 auto;   
+    border-style:ridge;
+    border-radius: 5px;
+    border-color:#7a6520
+}
+
+#comment-box .badge{
+text-align: right;
+}
+
+.comment-title {
+font-family: Arial, Helvetica, sans-serif;
+text-transform: none;
+font-size: 22px;
+color: #7a6520;
+text-align: left;
+margin: 10px 0;
+letter-spacing: 0;
+}
+
+.content-title h2 {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.comment-top {
+    display: inline-flex;
+    width: 100%;
+}
+
+.coment-a {
+    width: 100%;
+}
+
+.badge {
+    background:none;
+    color: #7a6520;
+    height: 24.2px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 20%;
+}
+
+.comment-content {
+    color: #523f03;
+    text-align: left;
+    font-size: 16px;
+    text-transform: none;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    max-height: 100%;
+}
+
+#comment-box {
+    padding: 5px 30px;
+    max-height: 500px;
+    overflow:auto;
+}
+
+hr {
+    margin: 0;
+}
+
+.form-group {
+    margin: 0;
+    display: flex;
+}
+
+textarea.form-control {
+    height: 150px;
+}
+
+.post-inner{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.left-comment{
+    margin: 0;
+    padding-top: 30px;
+}
+
+.fa-utensils, .fa-archway, .fa-leaf {
+    margin-bottom: 10px;
+}
+
+#about-gastro, #about-cultural, #about-rural {
+    padding: 0;
+}
+
+.about-outer {
+    padding-top: 0;
+}
+
+.route-gastro, .route-cultural, .route-rural {
+    margin-bottom: 0;
+    padding-top: 80px;
+}
+
+.container-gastro img, .container-cultural img, .container-rural img {
+    width: 50%;
+    margin: 0;
+    border-radius: 5px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.container-gastro:hover .image-gastro, .container-cultural:hover .image-cultural, .container-rural:hover .image-rural {
+opacity: 0.3;
+}
+
+.container-gastro:hover .middle, .container-cultural:hover .middle, .container-rural:hover .middle {
+opacity: 1;
+}
+
+.text-gastro, .text-cultural, .text-rural {
+background-color: #ccad49;
+color: white;
+font-size: 16px;
+padding: 16px 32px;
+}
+
+.places img {
+    background-color: #FFF;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 2px;
+    position: absolute;
+}
+
+/* Rota Gastronômica Imagens */
+.rubinho, .eventos {
+    margin: 100px 80px;
+}
+
+.sucata, .mariofava {
+    margin: 380px 80px;
+}
+
+.dvitto, .museu {
+    margin: 100px -220px;
+}
+
+.kanto, .dupla {
+    margin: 380px -220px;
+}
+
+/* --------------------------- */
+
+.all-places {
+    height: 500px;
+    width: 300px;
 }
