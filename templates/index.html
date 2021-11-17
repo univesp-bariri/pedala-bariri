@@ -40,7 +40,7 @@
                         <a href="#route">Rotas</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">Sobre</a>
+                        <a href="#about-fix">Sobre</a>
                     </li>
                     <li class="page-scroll">
                         <a href="#contact">Contato</a>
@@ -71,31 +71,40 @@
         </div>
     </section>
 
-    <section id="route" class="container content-section text-center">
+    <section id="route" class="container content-section text-center route-section">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Rotas Turísticas</h2>
-                <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
+                <p class='p-title'>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
                     reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
                 </p>
 
                 <div class="routes-images">
-                    <a href="{{ url_for('gastro') }}"><img class="zoom" src="{{ url_for('static', filename='img/gastro-index.jpg') }}" alt="Rota Gastronômica"></a>
-                    <a href="{{ url_for('cultural') }}"><img class="zoom" src="{{ url_for('static', filename='img/cultural-index.jpg') }}" alt="Rota Cultural"></a>
-                    <a href="{{ url_for('rural') }}"><img class="zoom" src="{{ url_for('static', filename='img/rural-index.jpg') }}" alt="Rota Rural"></a>
+                    <a href="{{ url_for('gastro') }}"><img class="zoom" src="{{ url_for('static', filename='img/gastro-index.jpg') }}" alt="Rota Gastronômica">
+                        <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
+                            reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                    </a>
+                    <a href="{{ url_for('cultural') }}"><img class="zoom" src="{{ url_for('static', filename='img/cultural-index.jpg') }}" alt="Rota Cultural">
+                        <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
+                            reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                    </a>
+                    <a href="{{ url_for('rural') }}"><img class="zoom" src="{{ url_for('static', filename='img/rural-index.jpg') }}" alt="Rota Rural">
+                        <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
+                            reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
+                    </a>
                 </div>
-
+            <div id="about-fix"></div>    
 
             </div>
         </div>
     </section>
 
-    <section id="about" class="content-section text-center">
+    <section id="about" class="text-center">
         <div class="about-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Sobre nós</h2>
-                    <p>Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
+                    <p class="p-title">Quando iniciamos o projeto Pedala Bariri, queriamos apenas 
                         reunir amigos que, assim como nós, eram apaixonados por ciclismo</p>
                 </div>
             </div>
@@ -106,7 +115,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 contact-box">
                 <h2>Contato</h2>
-                <p>Para sugestões, dúvidas ou parceria, sinta-se livre para entrar em contato conosco</p>
+                <p class="p-title">Para sugestões, dúvidas ou parceria, sinta-se livre para entrar em contato conosco</p>
 
                 <form action="{{ url_for('send') }}" method="post">      
                 <input name="nome" type="text" class="feedback-input" placeholder="Nome" required>   

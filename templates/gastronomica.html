@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1><i class="fa fa-title fas fa-utensils"></i> <br> <span class="light">Rota</span> Gastronômica</h1>
-                        <p class="intro-text">Nossos eventos ciclísticos, passeios sociais e programas de mudança de comportamento reúnem toda a comunidade. </p>
+                        <p class="intro-text">Nossos eventos ciclísticos, passeios sociais e programas de mudança de comportamento reúnem toda a comunidade.</p>
                         <div class="page-scroll">
                             <a href="#route" class="btn btn-circle">
                                 <i class="fa fa-angle-double-down animated"></i>
@@ -73,25 +73,30 @@
 
     <section id="route" class="container content-section text-center route-gastro">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-lg-8 col-lg-offset-2 gastro-inner">
                 <h2>Você encontrará pelo caminho</h2>
-                <a class="places" href="https://www.instagram.com/armazemdvitto/" target="_blank"><img class="zoom-places dvitto" src="{{ url_for('static', filename='img/dvitto.jpg') }}" alt="Armazeḿ DVitto"></a>
-                <a class="places" href="https://www.instagram.com/kantodolago/" target="_blank"><img class="zoom-places kanto" src="{{ url_for('static', filename='img/kanto.jpg') }}" alt="Kanto do Lago"></a>
+                <p class="p-title">Nossos eventos ciclísticos, passeios sociais e programas de mudança de comportamento reúnem toda a comunidade.</p>
                 <div class="routes-images container-gastro">
+                    <div class="left-content">
+                        <a class="places" href="https://www.instagram.com/armazemdvitto/" target="_blank"><img class="zoom-places dvitto" src="{{ url_for('static', filename='img/dvitto.jpg') }}" alt="Armazeḿ DVitto"></a>
+                        <a class="places" href="https://www.instagram.com/kantodolago/" target="_blank"><img class="zoom-places kanto" src="{{ url_for('static', filename='img/kanto.jpg') }}" alt="Kanto do Lago"></a>
+                    </div>
                     <img class="image-gastro" src="{{ url_for('static', filename='img/gastro-map.jpg') }}" alt="Rota Gastronômica">
                     <div class="middle">
                         <a href="https://www.google.com.br/maps/dir/-22.0682901,-48.7284741/Pizzaria+do+Rubinho/-22.0671064,-48.7404569/Kanto+do+Lago/Armaz%C3%A9m+D'+Vitto/BAR+DA+FORQUILHA,+Bariri+-+SP/Pal%C3%A1cio+Do+Sorvete/Restaurante+Sucata/Venda+da+Queixada+Bariri/@-22.1200487,-48.738822,13z/data=!4m51!4m50!1m0!1m5!1m1!1s0x94bf4adb2c92eed7:0xc356346f6873751c!2m2!1d-48.7327195!2d-22.0618748!1m0!1m5!1m1!1s0x94bf4be797ac6ef1:0x5a3440724dc61fb3!2m2!1d-48.7416355!2d-22.069057!1m5!1m1!1s0x94bf4aef630296e9:0xd2c18f8d6785aa85!2m2!1d-48.7460052!2d-22.0666659!1m5!1m1!1s0x94bf4b6759abef59:0x1d865c5de9d5aced!2m2!1d-48.7485679!2d-22.0652466!1m5!1m1!1s0x94bf4ae028ea2661:0xed6f9d8bdfef733a!2m2!1d-48.7411902!2d-22.0748949!1m10!1m1!1s0x94bf4b2002f7eeb5:0x54117d52c8fc2a73!2m2!1d-48.7390855!2d-22.0749414!3m4!1m2!1d-48.6896097!2d-22.1392867!3s0x94b8b31bf14c806b:0xa1c3ad97acf7da0c!1m5!1m1!1s0x94b8b2fccd2fd91f:0x87ee79a0cd45a640!2m2!1d-48.6890006!2d-22.1401872!3e1" target="_blank">
                         <div class="text-gastro">Acesse a rota</div>
                         </a>
                     </div>
+                    <div class="right-content">
+                        <a class="places" href="https://www.instagram.com/pizzariarubinho_ofc/" target="_blank"><img class="zoom-places rubinho" src="{{ url_for('static', filename='img/rubinho.jpg') }}" alt="Pizzaria do Rubinho"></a>
+                        <a class="places" href="https://www.instagram.com/sucata.restauranteebuffet/" target="_blank"><img class="zoom-places sucata" src="{{ url_for('static', filename='img/sucata.jpg') }}" alt="Restaurante Sucata"></a>
+                    </div>
                 </div>
-                <a class="places" href="https://www.instagram.com/pizzariarubinho_ofc/" target="_blank"><img class="zoom-places rubinho" src="{{ url_for('static', filename='img/rubinho.jpg') }}" alt="Pizzaria do Rubinho"></a>
-                <a class="places" href="https://www.instagram.com/sucata.restauranteebuffet/" target="_blank"><img class="zoom-places sucata" src="{{ url_for('static', filename='img/sucata.jpg') }}" alt="Restaurante Sucata"></a>
             </div>
         </div>
     </section>
 
-    <section id="about-gastro" class="content-section text-center">
+    <section id="about-gastro" class="text-center">
         <div class="about-section about-inner about-section-gastro">
             <h2 class="left-comment">Deixe seu comentário</h2>
             <div class="container">
