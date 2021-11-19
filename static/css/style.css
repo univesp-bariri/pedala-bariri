@@ -218,7 +218,7 @@ a:focus {
     }
 
     .intro-text {
-        font-size: 25px;
+        font-size: 24px;
     }
 }
 
@@ -436,7 +436,7 @@ canvas{
 }
 
 #route {
-    padding: 150px 0;
+    padding: 150px 0 100px 0;
     width: 100%;
     margin-left: 0;
     
@@ -472,10 +472,15 @@ canvas{
 
 .routes-images p {
     margin: 0 auto;
-    padding: 20px 0 40px 0px;
+    padding: 15px 0 40px 0px;
     color: #FFF;
-    width: 350px;
+    width: 300px;
+    font-size: 18px;
 }   
+
+.routes-images a {
+    margin: 20px;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -566,7 +571,7 @@ textarea {
 
 .routes-images img {
     width: 300px;
-    margin: 0 60px;
+    margin: 0 30px;
     border: 2px solid #FFF;
 }
 
@@ -741,8 +746,16 @@ padding: 16px 32px;
     width: 150px;
     padding: 2px;
     position: relative;
-    margin: 40px;
+    margin: 40px 40px 0 40px;
     flex-wrap: wrap;
+}
+
+.places p{
+    width: 200px;
+    padding: 20px 0 0 0;
+    margin-bottom: 20px;
+    line-height: normal;
+    font-size: 18px;
 }
 
 /* Rota Gastronômica Imagens */
@@ -789,6 +802,7 @@ img {
     color: #000;
 }
 
+
 /* Mobile */
 @media screen and (max-width:1070px) {
     .view {
@@ -796,7 +810,7 @@ img {
     }
 
     .right-content, .left-content {
-        display: inline;
+        display: flex;
         align-items: center;
     }
 
@@ -809,7 +823,7 @@ img {
     }
 
     #route {
-        padding-bottom: 50px;
+        padding-bottom: 0;
     }
 
 
@@ -817,6 +831,10 @@ img {
 
 /* Tiny-Mobile */
 @media screen and (max-width:750px) {
+    .view {
+        width: 200px;
+    }
+    
     .about-section {
         margin-top: 100px;
     }
@@ -836,7 +854,7 @@ img {
 
     .right-content, .left-content {
         display: flex;
-        align-items: center;
+        align-items: baseline;
     }
 
     .places img {
@@ -856,7 +874,7 @@ img {
     }
 
     .about-section {
-        margin-top: 50px;
+        margin-top: 5px;
     }
 
     .container .navbar-header {
