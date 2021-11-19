@@ -40,7 +40,7 @@
                         <a href="{{ url_for('index', _anchor='route') }}">Rotas</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="{{ url_for('index', _anchor='about') }}">Sobre</a>
+                        <a href="{{ url_for('index', _anchor='about-fix') }}">Sobre</a>
                     </li>
                     <li class="page-scroll">
                         <a href="{{ url_for('index', _anchor='contact') }}">Contato</a>
@@ -114,9 +114,9 @@
 
     <section id="about-rural" class="content-section text-center">
         <div class="about-section about-inner about-section-rural">
-            <h2 class="left-comment">Deixe seu comentário</h2>
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
+                    <h2 class="left-comment">Deixe seu comentário</h2>
                     <form class="post-inner" method="POST" action="/create-rural">
                         <div class="form-group">
                             <label for="title"></label>
