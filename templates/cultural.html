@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Pedala Bariri - Cicloturismo no Interior</title>
 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -89,10 +89,10 @@
                         </a>
                     </div>
                     <img class="image-cultural" src="{{ url_for('static', filename='img/cultural-map.jpg') }}" alt="Rota Cultural">
-                    <div class="middle">
-                        <a href="https://www.google.com.br/maps/dir/-22.0694216,-48.7296187/Par%C3%B3quia+Santu%C3%A1rio+N.Sra+Aparecida+-+Av.+Braz+Fortunato,+319+-+Jardim+Santa+Lucia,+Bariri+-+SP,+17250-000/Centro+Educacional,+Cultural+e+de+Exposi%C3%A7%C3%B5es+Mario+Fava+-+Avenida+Jos%C3%A9+Jorge+Reseque+-+Jardim+Nova+Bariri,+Bariri+-+SP/Igreja+Ortodoxa+Antioquina+de+S%C3%A3o+Jorge+-+Avenida+Jo%C3%A3o+Lemos+-+Vila+Santa+Terezinha,+Bariri+-+SP/-22.0757735,-48.7409086/Igreja+Matriz+%22Nossa+Senhora+das+Dores%22,+Bariri+-+SP/Museu+M%C3%A1rio+Fava+-+Rua+Tiradentes+-+Vila+Santa+Terezinha,+Bariri+-+SP/@-22.0697662,-48.7371054,16z/data=!4m44!4m43!1m0!1m5!1m1!1s0x94bf4adb8190dc15:0x714f73317d60fff2!2m2!1d-48.7340086!2d-22.0657356!1m10!1m1!1s0x94bf4ae7968754c3:0xc5f132221dfb5791!2m2!1d-48.7402832!2d-22.0666443!3m4!1m2!1d-48.7411433!2d-22.0727689!3s0x94bf4ae0f972c00f:0x6ac5a6ffc9b19839!1m10!1m1!1s0x94bf4b106d43590d:0xdbf86edd8e3d1a5a!2m2!1d-48.7402629!2d-22.0731519!3m4!1m2!1d-48.7409215!2d-22.0748176!3s0x94bf4ae02277c8f7:0xee299931436cfdd6!1m0!1m5!1m1!1s0x94bf4b1fd498ab81:0x34f16102170f0c5a!2m2!1d-48.7401937!2d-22.0750917!1m5!1m1!1s0x94bf4adffe582fb3:0x50dc2dfe1edc0592!2m2!1d-48.7391362!2d-22.0743111!3e1" target="_blank">
+                    <div class="middle" id="noGeo" onclick="">
+                        <a id="cultural-id" href="" target="_blank">
                         <div class="text-cultural">Acesse a rota</div>
-                    </a>
+                        </a>
                     </div>
                     <div class="right-content">
                         <a class="places" href="https://www.bariri.sp.gov.br/portal/noticias/3/1/12/0/0/0" target="_blank">
@@ -158,6 +158,30 @@
     <script src="{{ url_for('static', filename='js/jquery.easing.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/canvas.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/style.js') }}" ></script>
+    <script>
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function success(position) {
+            var getlatitude  = position.coords.latitude;
+            var getlongitude = position.coords.longitude;
+            var url = "https://www.google.com.br/maps/dir/" + getlatitude + "," + getlongitude + "/-22.0694298,-48.729618/Paróquia+Santuário+N.Sra+Aparecida+-+Av.+Braz+Fortunato,+319+-+Jardim+Santa+Lucia,+Bariri+-+SP,+17250-000/Igreja+Ortodoxa+Antioquina+de+São+Jorge,+Av.+João+Lemos,+687+-+Vila+Santa+Terezinha,+Bariri+-+SP,+17250-000/''/Museu+Mário+Fava,+R.+Tiradentes,+410+-+Vila+Santa+Terezinha,+Bariri+-+SP,+17250-000/''/@-22.0693971,-48.7402519,16z/data=!3m1!4b1!4m34!4m33!1m0!1m0!1m5!1m1!1s0x94bf4adb8190dc15:0x714f73317d60fff2!2m2!1d-48.7340086!2d-22.0657356!1m5!1m1!1s0x94bf4ae7968754c3:0xc5f132221dfb5791!2m2!1d-48.7402832!2d-22.0666443!1m5!1m1!1s0x94bf4b106d43590d:0xdbf86edd8e3d1a5a!2m2!1d-48.7402629!2d-22.0731519!1m5!1m1!1s0x94bf4b1fd498ab81:0x34f16102170f0c5a!2m2!1d-48.7401937!2d-22.0750917!1m5!1m1!1s0x94bf4adffe582fb3:0x50dc2dfe1edc0592!2m2!1d-48.7391362!2d-22.0743111!3e1"
+            document.getElementById('cultural-id').setAttribute("href",url);
+            console.log(position);
+        } ;
+
+        function error(error){
+            var url = "https://www.google.com.br/maps/dir//-22.0694298,-48.729618/Paróquia+Santuário+N.Sra+Aparecida+-+Av.+Braz+Fortunato,+319+-+Jardim+Santa+Lucia,+Bariri+-+SP,+17250-000/Igreja+Ortodoxa+Antioquina+de+São+Jorge,+Av.+João+Lemos,+687+-+Vila+Santa+Terezinha,+Bariri+-+SP,+17250-000/''/Museu+Mário+Fava,+R.+Tiradentes,+410+-+Vila+Santa+Terezinha,+Bariri+-+SP,+17250-000/''/@-22.0693971,-48.7402519,16z/data=!3m1!4b1!4m34!4m33!1m0!1m0!1m5!1m1!1s0x94bf4adb8190dc15:0x714f73317d60fff2!2m2!1d-48.7340086!2d-22.0657356!1m5!1m1!1s0x94bf4ae7968754c3:0xc5f132221dfb5791!2m2!1d-48.7402832!2d-22.0666443!1m5!1m1!1s0x94bf4b106d43590d:0xdbf86edd8e3d1a5a!2m2!1d-48.7402629!2d-22.0731519!1m5!1m1!1s0x94bf4b1fd498ab81:0x34f16102170f0c5a!2m2!1d-48.7401937!2d-22.0750917!1m5!1m1!1s0x94bf4adffe582fb3:0x50dc2dfe1edc0592!2m2!1d-48.7391362!2d-22.0743111!3e1"
+            document.getElementById('cultural-id').setAttribute("href",url)
+            document.getElementById('noGeo').setAttribute("onClick","alert('Não foi possível identificar sua localização! Habilite essa função ou selecione o ponto de partida no Google Maps.')"); 
+        };
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+    </script>
 
 </body>
 

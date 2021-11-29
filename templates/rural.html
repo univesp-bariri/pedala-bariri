@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Pedala Bariri - Cicloturismo no Interior</title>
 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -81,28 +81,28 @@
                     ponto turístico da cidade.</p>
                 <div class="routes-images container-rural">
                     <div class="left-content">
-                        <a class="places" href="https://www.instagram.com/armazemdvitto/" target="_blank">
+                        <a class="places" href="https://www.facebook.com/pages/Lago%20Municipal%20Bariri/1184867901623278/" target="_blank">
                             <img class="zoom-places lago" src="{{ url_for('static', filename='img/lago.jpg') }}" alt="Lago Municipal">
                             <p>Lago Municipal</p>
                         </a>
-                        <a class="places" href="https://www.instagram.com/kantodolago/" target="_blank">
+                        <a class="places" href="https://pt.wikipedia.org/wiki/Barragem_de_Bariri" target="_blank">
                             <img class="zoom-places tiete" src="{{ url_for('static', filename='img/tiete.jpg') }}" alt="Rio Tietê">
                             <p>Rio Tietê</p>
                         </a>
                     </div>                       
                     <img class="image-rural" src="{{ url_for('static', filename='img/rural-map.jpg') }}" alt="Rota Rural">
-                    <div class="middle">
-                        <a href="https://www.google.com.br/maps/dir/Lago+Municipal+-+Jardim+Beltrame,+Bariri+-+SP/Estr.+Rio+Ti%C3%AAte+-+Santa+Helena,+Bariri+-+SP,+17250-000/Igrejinha+da+Queixadinha,+Bariri+-+SP/-22.140534713433695,+-48.689128006146206/-22.10585720152699,+-48.70891292854754/Cabana+Mateiro,+Bariri+-+SP/@-22.1050828,-48.7628386,13.33z/data=!4m34!4m33!1m5!1m1!1s0x94bf4ae7b1910259:0x68f040fcebf0012d!2m2!1d-48.7414208!2d-22.0669433!1m5!1m1!1s0x94bf4bbb6c918fcd:0xb3d83f7fc8abea85!2m2!1d-48.7731855!2d-22.0957346!1m5!1m1!1s0x94bf4d40a54433df:0x4c5c4cafb260b87c!2m2!1d-48.7337899!2d-22.1368866!1m3!2m2!1d-48.689128!2d-22.1405347!1m3!2m2!1d-48.7089129!2d-22.1058572!1m5!1m1!1s0x94b8b4c7164a4425:0x2c27f17aa5840f0a!2m2!1d-48.7054253!2d-22.0819758!3e1?utm_medium=s2email&shorturl=1" target="_blank">
+                    <div class="middle" id="noGeo" onclick="">
+                        <a id="rural-id" href="" target="_blank">
                         <div class="text-rural">Acesse a rota</div>
                         </a>
                     </div>
                 
                     <div class="right-content">
-                        <a class="places" href="https://www.instagram.com/pizzariarubinho_ofc/" target="_blank">
+                        <a class="places" href="http://wikimapia.org/16055015/pt/Capela-de-S%C3%A3o-Jos%C3%A9" target="_blank">
                             <img class="zoom-places capela" src="{{ url_for('static', filename='img/capela.jpg') }}" alt="Capela de São José">
                             <p>Capela de São José</p>
                         </a>
-                        <a class="places" href="https://www.instagram.com/sucata.restauranteebuffet/" target="_blank">
+                        <a class="places" href="https://www.facebook.com/cabanamateiro/" target="_blank">
                             <img class="zoom-places cabana" src="{{ url_for('static', filename='img/cabana.jpg') }}" alt="Cabana Mateiro">
                             <p>Cabana Mateiro</p>
                         </a>
@@ -161,6 +161,30 @@
     <script src="{{ url_for('static', filename='js/jquery.easing.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/canvas.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/style.js') }}" ></script>
+    <script>
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function success(position) {
+            var getlatitude  = position.coords.latitude;
+            var getlongitude = position.coords.longitude;
+            var url = "https://www.google.com.br/maps/dir/" + getlatitude + "," + getlongitude + "/Lago+Municipal+-+Jardim+Beltrame,+Bariri+-+SP/Estrada+Rio+Tiête,+Bariri+-+SP/Igrejinha+da+Queixadinha,+Bariri+-+SP/Capela+de+São+José,+Bariri+-+SP,+17250-000/Cabana+Mateiro,+Bariri+-+SP/@-22.0732703,-48.7308812,15.5z/data=!4m34!4m33!1m1!4e1!1m5!1m1!1s0x94bf4ae7b1910259:0x68f040fcebf0012d!2m2!1d-48.7414208!2d-22.0669433!1m5!1m1!1s0x94bf4bbb6c918fcd:0xb3d83f7fc8abea85!2m2!1d-48.7731855!2d-22.0957346!1m5!1m1!1s0x94bf4d40a54433df:0x4c5c4cafb260b87c!2m2!1d-48.7337899!2d-22.1368866!1m5!1m1!1s0x94b8b370091bf2b3:0xabc02d72b062d24c!2m2!1d-48.6891094!2d-22.1405292!1m5!1m1!1s0x94b8b4c7164a4425:0x2c27f17aa5840f0a!2m2!1d-48.7054253!2d-22.0819758!3e1"
+            document.getElementById('rural-id').setAttribute("href",url);
+            console.log(position);
+        } ;
+
+        function error(error){
+            var url = "https://www.google.com.br/maps/dir//Lago+Municipal+-+Jardim+Beltrame,+Bariri+-+SP/Estrada+Rio+Tiête,+Bariri+-+SP/Igrejinha+da+Queixadinha,+Bariri+-+SP/Capela+de+São+José,+Bariri+-+SP,+17250-000/Cabana+Mateiro,+Bariri+-+SP/@-22.0732703,-48.7308812,15.5z/data=!4m34!4m33!1m1!4e1!1m5!1m1!1s0x94bf4ae7b1910259:0x68f040fcebf0012d!2m2!1d-48.7414208!2d-22.0669433!1m5!1m1!1s0x94bf4bbb6c918fcd:0xb3d83f7fc8abea85!2m2!1d-48.7731855!2d-22.0957346!1m5!1m1!1s0x94bf4d40a54433df:0x4c5c4cafb260b87c!2m2!1d-48.7337899!2d-22.1368866!1m5!1m1!1s0x94b8b370091bf2b3:0xabc02d72b062d24c!2m2!1d-48.6891094!2d-22.1405292!1m5!1m1!1s0x94b8b4c7164a4425:0x2c27f17aa5840f0a!2m2!1d-48.7054253!2d-22.0819758!3e1"
+            document.getElementById('rural-id').setAttribute("href",url)
+            document.getElementById('noGeo').setAttribute("onClick","alert('Não foi possível identificar sua localização! Habilite essa função ou selecione o ponto de partida no Google Maps.')"); 
+        };
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+    </script>
 
 </body>
 

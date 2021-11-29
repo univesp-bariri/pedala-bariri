@@ -38,7 +38,7 @@ email_settings = {
     "MAIL_USE_TLS": False,
     "MAIL_USE_SSL": True,
     "MAIL_USERNAME": 'MAIL_USER',
-    "MAIL_PASSWORD": 'MAIL_PASSWORD'
+    "MAIL_PASSWORD": 'MAIL_PASS'
 }
 
 app.config.update(email_settings)

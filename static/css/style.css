@@ -53,7 +53,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #ebe70e;
+    color: #000;
 }
 
 .light {
@@ -585,7 +585,7 @@ textarea {
 }
 
 .zoom {
-    transition: transform .2s; /* Animation */
+    transition: transform .2s;
     width: 200px;
     height: 200px;
     margin: 0 auto;
@@ -761,7 +761,7 @@ padding: 16px 32px;
 
 .places p{
     width: 200px;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     margin-bottom: 20px;
     line-height: normal;
     font-size: 18px;
@@ -796,7 +796,6 @@ padding: 16px 32px;
 
 .right-content, .left-content {
     display: grid;
-    align-items: center;
 }
 
 /* --------------------------- */
@@ -813,9 +812,9 @@ img {
 
 
 /* Tablet */
-@media screen and (max-width:1070px) {
+@media screen and (max-width:1200px) {
     .view {
-        width: 400px;
+        width: 1200px;
     }
 
     .right-content, .left-content {
@@ -833,6 +832,14 @@ img {
 
     #route {
         padding-bottom: 0;
+    }
+
+    .routes-images {
+        padding: 0;
+        transform: scale(0.9);
+        margin-top: 0;
+        width: min-content;
+        margin: 0 auto;
     }
 
 
@@ -856,9 +863,10 @@ img {
         max-width: 90%;
     }
 
-    .places {
-        scale: 75%;
+    .routes-images .places {
+        transform: scale(0.8);
         margin: 0;
+        height: min-content;
     }
 
     .right-content, .left-content {
@@ -877,12 +885,6 @@ img {
 
     #route {
         padding: 100px 0 0 0;
-    }
-
-    .routes-images {
-        padding: 0;
-        scale: 90%;
-        margin-top: 0;
     }
 
     .routes-images p {
@@ -925,11 +927,29 @@ img {
         padding: 0;
     }
 
+    
+    .p-title {
+        margin-bottom: 30px;
+    }
+
+    #route h2 {
+        margin-bottom: 10px;
+    }
+
 }
 
 /* Tiny-Mobile */
 @media screen and (max-width:400px) { 
     h1, h2 {
-        font-size: 26px;
+    font-size: 26px;
     }
+
+    .routes-images {
+        padding: 0;
+        transform: scale(0.9);
+        margin-top: 0;
+        width: auto;
+        margin: 0;
+    }
+
 }

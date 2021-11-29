@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">    <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Pedala Bariri - Cicloturismo no Interior</title>
 
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -88,8 +88,8 @@
                         </a>
                     </div>
                     <img class="image-gastro" src="{{ url_for('static', filename='img/gastro-map.jpg') }}" alt="Rota Gastronômica">
-                    <div class="middle">
-                        <a href="https://www.google.com.br/maps/dir/-22.0682901,-48.7284741/Pizzaria+do+Rubinho/-22.0671064,-48.7404569/Kanto+do+Lago/Armaz%C3%A9m+D'+Vitto/BAR+DA+FORQUILHA,+Bariri+-+SP/Pal%C3%A1cio+Do+Sorvete/Restaurante+Sucata/Venda+da+Queixada+Bariri/@-22.1200487,-48.738822,13z/data=!4m51!4m50!1m0!1m5!1m1!1s0x94bf4adb2c92eed7:0xc356346f6873751c!2m2!1d-48.7327195!2d-22.0618748!1m0!1m5!1m1!1s0x94bf4be797ac6ef1:0x5a3440724dc61fb3!2m2!1d-48.7416355!2d-22.069057!1m5!1m1!1s0x94bf4aef630296e9:0xd2c18f8d6785aa85!2m2!1d-48.7460052!2d-22.0666659!1m5!1m1!1s0x94bf4b6759abef59:0x1d865c5de9d5aced!2m2!1d-48.7485679!2d-22.0652466!1m5!1m1!1s0x94bf4ae028ea2661:0xed6f9d8bdfef733a!2m2!1d-48.7411902!2d-22.0748949!1m10!1m1!1s0x94bf4b2002f7eeb5:0x54117d52c8fc2a73!2m2!1d-48.7390855!2d-22.0749414!3m4!1m2!1d-48.6896097!2d-22.1392867!3s0x94b8b31bf14c806b:0xa1c3ad97acf7da0c!1m5!1m1!1s0x94b8b2fccd2fd91f:0x87ee79a0cd45a640!2m2!1d-48.6890006!2d-22.1401872!3e1" target="_blank">
+                    <div class="middle" id="noGeo" onclick="">
+                        <a id="gastro-id" href="" target="_blank">
                         <div class="text-gastro">Acesse a rota</div>
                         </a>
                     </div>
@@ -157,6 +157,30 @@
     <script src="{{ url_for('static', filename='js/jquery.easing.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/canvas.js') }}" ></script>
     <script src="{{ url_for('static', filename='js/style.js') }}" ></script>
+    <script>
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function success(position) {
+            var getlatitude  = position.coords.latitude;
+            var getlongitude = position.coords.longitude;
+            var url = "https://www.google.com.br/maps/dir/" + getlatitude + "," + getlongitude + "/Pizzaria+do+Rubinho/-22.0671064,-48.7404569/Kanto+do+Lago/Armaz%C3%A9m+D'+Vitto/BAR+DA+FORQUILHA,+Bariri+-+SP/Pal%C3%A1cio+Do+Sorvete/Restaurante+Sucata/Venda+da+Queixada+Bariri/@-22.1200487,-48.738822,13z/data=!4m51!4m50!1m0!1m5!1m1!1s0x94bf4adb2c92eed7:0xc356346f6873751c!2m2!1d-48.7327195!2d-22.0618748!1m0!1m5!1m1!1s0x94bf4be797ac6ef1:0x5a3440724dc61fb3!2m2!1d-48.7416355!2d-22.069057!1m5!1m1!1s0x94bf4aef630296e9:0xd2c18f8d6785aa85!2m2!1d-48.7460052!2d-22.0666659!1m5!1m1!1s0x94bf4b6759abef59:0x1d865c5de9d5aced!2m2!1d-48.7485679!2d-22.0652466!1m5!1m1!1s0x94bf4ae028ea2661:0xed6f9d8bdfef733a!2m2!1d-48.7411902!2d-22.0748949!1m10!1m1!1s0x94bf4b2002f7eeb5:0x54117d52c8fc2a73!2m2!1d-48.7390855!2d-22.0749414!3m4!1m2!1d-48.6896097!2d-22.1392867!3s0x94b8b31bf14c806b:0xa1c3ad97acf7da0c!1m5!1m1!1s0x94b8b2fccd2fd91f:0x87ee79a0cd45a640!2m2!1d-48.6890006!2d-22.1401872!3e1"
+            document.getElementById('gastro-id').setAttribute("href",url);
+            console.log(position);
+        } ;
+
+        function error(error){
+            var url = "https://www.google.com.br/maps/dir//Pizzaria+do+Rubinho/-22.0671064,-48.7404569/Kanto+do+Lago/Armaz%C3%A9m+D'+Vitto/BAR+DA+FORQUILHA,+Bariri+-+SP/Pal%C3%A1cio+Do+Sorvete/Restaurante+Sucata/Venda+da+Queixada+Bariri/@-22.1200487,-48.738822,13z/data=!4m51!4m50!1m0!1m5!1m1!1s0x94bf4adb2c92eed7:0xc356346f6873751c!2m2!1d-48.7327195!2d-22.0618748!1m0!1m5!1m1!1s0x94bf4be797ac6ef1:0x5a3440724dc61fb3!2m2!1d-48.7416355!2d-22.069057!1m5!1m1!1s0x94bf4aef630296e9:0xd2c18f8d6785aa85!2m2!1d-48.7460052!2d-22.0666659!1m5!1m1!1s0x94bf4b6759abef59:0x1d865c5de9d5aced!2m2!1d-48.7485679!2d-22.0652466!1m5!1m1!1s0x94bf4ae028ea2661:0xed6f9d8bdfef733a!2m2!1d-48.7411902!2d-22.0748949!1m10!1m1!1s0x94bf4b2002f7eeb5:0x54117d52c8fc2a73!2m2!1d-48.7390855!2d-22.0749414!3m4!1m2!1d-48.6896097!2d-22.1392867!3s0x94b8b31bf14c806b:0xa1c3ad97acf7da0c!1m5!1m1!1s0x94b8b2fccd2fd91f:0x87ee79a0cd45a640!2m2!1d-48.6890006!2d-22.1401872!3e1"
+            document.getElementById('gastro-id').setAttribute("href",url)
+            document.getElementById('noGeo').setAttribute("onClick","alert('Não foi possível identificar sua localização! Habilite essa função ou selecione o ponto de partida no Google Maps.')"); 
+        };
+
+        navigator.geolocation.getCurrentPosition(success, error, options);
+
+    </script>
 
 </body>
 
